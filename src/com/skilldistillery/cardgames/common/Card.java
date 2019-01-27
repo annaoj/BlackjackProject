@@ -4,7 +4,7 @@ public class Card {
 	private Suit suit;
 	private Rank rank;
 	
-	public Card(Suit suit, Rank rank) {
+	public Card( Rank rank, Suit suit) {
 		this.suit = suit;
 		this.rank = rank;
 	}
@@ -39,7 +39,7 @@ public class Card {
 
 	@Override
 	public String toString() {
-		return rank + "of" + suit;
+		return rank + " of " + suit;
 	}
 	
 	public int getValue() {
