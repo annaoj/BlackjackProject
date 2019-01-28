@@ -9,7 +9,6 @@ public class Deck {
 
 	public Deck() {
 		deck = new ArrayList<>(52);
-	
 		for (Suit suit : Suit.values()) {
 			for (Rank rank : Rank.values()) {
 				deck.add(new Card(rank, suit));
@@ -21,10 +20,11 @@ public class Deck {
 		System.out.println(deck.size());
 		return deck.size();
 	}
+
 	public Card dealCard() {
 		return deck.remove(0);
 	}
-	
+
 	public void shuffle() {
 		Collections.shuffle(deck);
 	}

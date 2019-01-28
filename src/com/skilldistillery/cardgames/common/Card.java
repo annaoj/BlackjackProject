@@ -3,13 +3,12 @@ package com.skilldistillery.cardgames.common;
 public class Card {
 	private Suit suit;
 	private Rank rank;
-	
-	public Card( Rank rank, Suit suit) {
+
+	public Card(Rank rank, Suit suit) {
 		this.suit = suit;
 		this.rank = rank;
 	}
 
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -18,7 +17,6 @@ public class Card {
 		result = prime * result + ((suit == null) ? 0 : suit.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -36,16 +34,13 @@ public class Card {
 		return true;
 	}
 
-
 	@Override
 	public String toString() {
 		return rank + " of " + suit;
 	}
-	
+
 	public int getValue() {
 		return rank.getValue();
 	}
-	
-	
 
 }

@@ -1,13 +1,12 @@
 package com.skilldistillery.cardgames.common;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public abstract class Hand {
 
 	private List<Card> hand;
-	//hand created empty
+
 	public Hand(){
 		hand = new ArrayList<Card>();
 	};
@@ -20,7 +19,6 @@ public abstract class Hand {
 		return counter;
 	}
 	
-	//we can add card to the hand
 	public void addCard(Card c) {
 		try {
 			hand.add(c);
@@ -31,7 +29,7 @@ public abstract class Hand {
 	}
 	
 	public void clearHand() {
-		hand.clear();// or should I new ArrayList
+		hand.clear();
 	}
 	
 	public List<Card> getCards() {
@@ -42,11 +40,9 @@ public abstract class Hand {
 	public String toString() {
 		return hand.toString();
 	}
-	
-	//show top one card for dealer
+
 	public Card showOneCard() {
 		return hand.get(0);
 	}
 	
-
 }
